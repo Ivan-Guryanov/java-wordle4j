@@ -13,13 +13,13 @@ public class MyLogWriter {
     private static final String fileName = "print_writer.txt";
 
     private Writer fileWriter;
-    private int count =0;
+    private int count = 0;
 
     public MyLogWriter() throws IOException {
         this.fileWriter = new FileWriter(fileName, true);
     }
 
-    public void newFile(){
+    public void newFile() {
 
         try {
             Files.deleteIfExists(Path.of(fileName)); // Сначала удаляем, если есть
