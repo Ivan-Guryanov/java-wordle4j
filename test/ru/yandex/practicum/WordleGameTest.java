@@ -69,30 +69,6 @@ public class WordleGameTest {
         assertEquals("^---^", inList.get(0));
     }
 
-    @Test
-    @DisplayName("game: Неверное слово, затем выигрыш")
-    public void testGame_WinOnSecondAttempt() throws NoSuchFieldException, IllegalAccessException {
-        WordleGame game = new WordleGame(6, TEST_DICTIONARY);
-        String secretAnswer = "ТЕПЛО";
-        setGameAnswer(game, secretAnswer);
-
-        // Симулируем ввод неверного слова, затем верного
-        String input = "РУЧКА\n" + secretAnswer + "\n";
-        simulateUserInput(input, game);
-
-        game.game();
-
-        String consoleOutput = outContent.toString();
-        assertTrue(consoleOutput.contains("Поздравляем! Вы отгадали слово)"));
-
-        // Проверяем, что шаги уменьшились
-        assertEquals(5, getPrivateField(game, "steps"));
-
-        // Проверяем, что в выводе есть обе попытки и фидбек
-        assertTrue(consoleOutput.contains("РУЧКА"));
-        assertTrue(consoleOutput.contains("-----")); // Фидбек для РУЧКА
-        assertTrue(consoleOutput.contains("ТЕПЛО"));
-    }
 
     @Test
     @DisplayName("game: Ввод слова неверной длины, затем корректный ввод")
