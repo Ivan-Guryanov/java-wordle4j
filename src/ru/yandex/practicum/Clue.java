@@ -87,12 +87,12 @@ public class Clue {
 
             for (String words : clue) {
                 char[] charClue5 = words.toCharArray();                 //слово из списка
-                for(int i = 0; i<charClue5.length; i++ ){
-                    if(charClue1[i] == '+'){
+                for (int i = 0; i < charClue5.length; i++) {
+                    if (charClue1[i] == '+') {
                         charClue5[i] = '+';
                     }
                 }
-                if(containsAllChars(charClue5, charClue4)){
+                if (containsAllChars(charClue5, charClue4)) {
                     clue2.add(words);
                 }
             }
@@ -131,13 +131,13 @@ public class Clue {
                     }
                 }
 
-                for(int i = 0; i < charClue6.length; i++){
+                for (int i = 0; i < charClue6.length; i++) {
                     for (int j = 0; j < charClue8.length; j++) {
                         if (charClue6[i] == charClue8[j]) {
                             bo = false;
                         }
                     }
-                }if(bo){
+                } if (bo) {
                     clue3.add(words);
                 }
             }
@@ -151,9 +151,6 @@ public class Clue {
         } catch (IndexOutOfBoundsException e) {
             System.err.println("Произошла ошибка выхода за границы массива3.");
         }
-        //char[] charClue = word.toCharArray();           //слово
-        //char[] charClue1 = charArray;                   //служебные символы
-
     }
 
     public static boolean containsChar(char[] array, char target) {
@@ -175,6 +172,5 @@ public class Clue {
 
         return true;
     }
-
 
 }
