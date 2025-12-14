@@ -35,7 +35,7 @@ public class WordleGame {
         this.dictionary = dictionary;
         this.answer = dictionary.get(random.nextInt(0, dictionary.size()));
         Wordle.printWriter.writeData("Загадано слово: " + this.answer);
-        clue1 =  new Clue(dictionary);
+        clue1 = new Clue(dictionary);
     }
 
     public void game() {
@@ -59,8 +59,8 @@ public class WordleGame {
                 System.out.println("Ошибка ввода данных. Попробуйте снова.");
                 continue;
             }
-            if(word.length() != answer.length()){
-                if(word.equals("?")){
+            if (word.length() != answer.length()) {
+                if (word.equals("?")) {
                     word = clue1.randomGetWord();
                     Wordle.printWriter.writeData("Введено слово подсказка: " + word);
                     in.add(word);
@@ -99,16 +99,16 @@ public class WordleGame {
         char[] charArray = word.toCharArray();
         char[] charArray1 = answer.toCharArray();
         for (int i = 0; i < word.length(); i++) {
-            if(word.charAt(i) == answer.charAt(i)){
+            if (word.charAt(i) == answer.charAt(i)) {
                 charArray[i] = '+';
                 charArray1[i] = '+';
             }
         }
 
-        for (int i = 0; i < word.length(); i++){
-            if (charArray[i] != '+'){
-                for (char ch : charArray1){
-                    if(ch == word.charAt(i)){
+        for (int i = 0; i < word.length(); i++) {
+            if (charArray[i] != '+') {
+                for (char ch : charArray1) {
+                    if (ch == word.charAt(i)) {
                         charArray[i] = '^';
                     }
                 }
@@ -129,10 +129,10 @@ public class WordleGame {
 
     }
 
-    void print(){
+    void print() {
         System.out.println("Ваши результаты:\n" +
                 "*************");
-        for (int i = 0; i < in.size(); i++){
+        for (int i = 0; i < in.size(); i++) {
             System.out.println(in.get(i));
         }
         System.out.println("*************");

@@ -1,6 +1,8 @@
 package ru.yandex.practicum;
 
-/**ЭТОТ КЛАСС НЕ ИСПОЛЬЗОВАЛ, НЕ ВПИСЫВАЕТСЯ В ЛОГИКУ.*/
+/**
+ * ЭТОТ КЛАСС НЕ ИСПОЛЬЗОВАЛ, НЕ ВПИСЫВАЕТСЯ В ЛОГИКУ.
+ */
 
 /*import java.io.*;
 import java.nio.charset.StandardCharsets;
