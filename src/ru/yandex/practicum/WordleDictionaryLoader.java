@@ -2,10 +2,10 @@ package ru.yandex.practicum;
 
 /**ЭТОТ КЛАСС НЕ ИСПОЛЬЗОВАЛ, НЕ ВПИСЫВАЕТСЯ В ЛОГИКУ.*/
 
-import java.io.*;
+/*import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List;*/
 
 /*
 этот класс содержит в себе всю рутину по работе с файлами словарей и с кодировками
