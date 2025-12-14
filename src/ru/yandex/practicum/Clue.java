@@ -137,7 +137,9 @@ public class Clue {
                             bo = false;
                         }
                     }
-                } if (bo) {
+                }
+
+                if (bo) {
                     clue3.add(words);
                 }
             }
