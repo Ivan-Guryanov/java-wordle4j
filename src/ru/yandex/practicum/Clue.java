@@ -41,12 +41,12 @@ public class Clue {
             }
         }
 
-        clue = ChoiceByGreen(wordSpelled, serviceSymbols, numberOfGreen);
-        clue = ChoiceByYellow(wordSpelled, serviceSymbols, numberOfYellow);
-        clue = ChoiceByGrays(wordSpelled, serviceSymbols, numberOfGrays, numberOfGreen);
+        clue = сhoiceByGreen(wordSpelled, serviceSymbols, numberOfGreen);
+        clue = сhoiceByYellow(wordSpelled, serviceSymbols, numberOfYellow);
+        clue = сhoiceByGrays(wordSpelled, serviceSymbols, numberOfGrays, numberOfGreen);
     }
 
-    private ArrayList<String> ChoiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
+    private ArrayList<String> сhoiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
 
         ArrayList<String> wordsOfGreen = new ArrayList<>();       //временный список для слов прошедших по +
 
@@ -71,15 +71,15 @@ public class Clue {
         return wordsOfGreen;
     }
 
-    private ArrayList<String> ChoiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
+    private ArrayList<String> сhoiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
 
         ArrayList<String> wordsOfYellow = new ArrayList<>();         //временный список проверенных по ^
-        char[] LettersToCheck = new char[numberOfYellow];            //проверяемые символы на вхождение
+        char[] ltersToCheck = new char[numberOfYellow];            //проверяемые символы на вхождение
         int cloud = 0;
 
         for (int i = 0; i < serviceSymbols.length; i++) {
             if (serviceSymbols[i] == '^') {
-                LettersToCheck[cloud] = wordSpelled[i];
+                ltersToCheck[cloud] = wordSpelled[i];
                 cloud++;
             }
         }
@@ -91,7 +91,7 @@ public class Clue {
                     wordFromTheList[i] = '+';
                 }
             }
-            if (containsAllChars(wordFromTheList, LettersToCheck)) {
+            if (containsAllChars(wordFromTheList, ltersToCheck)) {
                 wordsOfYellow.add(words);
             }
         }
@@ -103,7 +103,7 @@ public class Clue {
 
     }
 
-    private ArrayList<String> ChoiceByGrays(char[] wordSpelled, char[] serviceSymbols,
+    private ArrayList<String> сhoiceByGrays(char[] wordSpelled, char[] serviceSymbols,
                                             int numberOfGrays, int numbertOfGreen) {
 
         ArrayList<String> wordsOfGrays = new ArrayList<>();                 //временный список проверенных по -
