@@ -62,7 +62,7 @@ public class WordleTest {
         simulateUserInput("abc\n");
         int result = Wordle.start();
         assertEquals(-1, result, "start() должен вернуть -1 при неверном вводе");
-        assertTrue(outContent.toString().contains("Нужно ввести цело число!"));
+        assertTrue(outContent.toString().contains("Нужно ввести целое число!"));
     }
 
 
