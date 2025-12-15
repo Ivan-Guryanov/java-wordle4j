@@ -41,12 +41,12 @@ public class Clue {
             }
         }
 
-        clue = сhoiceByGreen(wordSpelled, serviceSymbols, numberOfGreen);
-        clue = сhoiceByYellow(wordSpelled, serviceSymbols, numberOfYellow);
-        clue = сhoiceByGrays(wordSpelled, serviceSymbols, numberOfGrays, numberOfGreen);
+        clue = choiceByGreen(wordSpelled, serviceSymbols, numberOfGreen);
+        clue = choiceByYellow(wordSpelled, serviceSymbols, numberOfYellow);
+        clue = choiceByGrays(wordSpelled, serviceSymbols, numberOfGrays, numberOfGreen);
     }
 
-    private ArrayList<String> сhoiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
+    private ArrayList<String> choiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
 
         ArrayList<String> wordsOfGreen = new ArrayList<>();       //временный список для слов прошедших по +
 
@@ -71,7 +71,7 @@ public class Clue {
         return wordsOfGreen;
     }
 
-    private ArrayList<String> сhoiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
+    private ArrayList<String> choiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
 
         ArrayList<String> wordsOfYellow = new ArrayList<>();         //временный список проверенных по ^
         char[] ltersToCheck = new char[numberOfYellow];            //проверяемые символы на вхождение
@@ -103,7 +103,7 @@ public class Clue {
 
     }
 
-    private ArrayList<String> сhoiceByGrays(char[] wordSpelled, char[] serviceSymbols,
+    private ArrayList<String> choiceByGrays(char[] wordSpelled, char[] serviceSymbols,
                                             int numberOfGrays, int numbertOfGreen) {
 
         ArrayList<String> wordsOfGrays = new ArrayList<>();                 //временный список проверенных по -
