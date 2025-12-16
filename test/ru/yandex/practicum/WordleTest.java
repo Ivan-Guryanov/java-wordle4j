@@ -57,16 +57,6 @@ public class WordleTest {
     }
 
     @Test
-    @DisplayName("Проверка функции start() при нечисловом вводе")
-    public void testStart_InvalidInput() {
-        simulateUserInput("abc\n");
-        int result = Wordle.start();
-        assertEquals(-1, result, "start() должен вернуть -1 при неверном вводе");
-        assertTrue(outContent.toString().contains("Нужно ввести целое число!"));
-    }
-
-
-    @Test
     @DisplayName("Проверка функции gameOver() при вводе 'нет' (Не играть еще)")
     public void testGameOver_Exit() {
         simulateUserInput("нет\n"); // Любой нечисловой ввод

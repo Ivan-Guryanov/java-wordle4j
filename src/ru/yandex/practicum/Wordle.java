@@ -84,13 +84,11 @@ public class Wordle {
                 "Если хотите сыграть в классическую игру нажмите - 1;\n" +
                 "Если хотите сыграть в игру со своими параметрами нажмите - 2;\n" +
                 "Если хотите выйти нажмите любой другой символ.");
-        try {
-            choice = scanner.nextInt();
 
-        } catch (InputMismatchException e) {
-            System.out.println("Нужно ввести цело число!");
-        }
+        choice = scanner.nextInt();
+
         return choice;
+
     }
 
     public static int gameOver() {

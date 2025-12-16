@@ -22,7 +22,7 @@ public class Clue {
     }
 
     public void listOfWords(String word, char[] charArray) {
-        char[] wordSpelled = word.toCharArray();                //слово
+        char[] wordSpelled = word.toCharArray();             //слово
         char[] serviceSymbols = charArray;                   //служебные символы
 
         int numberOfGreen = 0;                              // отгаданы
@@ -46,7 +46,7 @@ public class Clue {
         clue = choiceByGrays(wordSpelled, serviceSymbols, numberOfGrays, numberOfGreen);
     }
 
-    private ArrayList<String> choiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
+    public ArrayList<String> choiceByGreen(char[] wordSpelled, char[] serviceSymbols, int numberOfGreen) {
 
         ArrayList<String> wordsOfGreen = new ArrayList<>();       //временный список для слов прошедших по +
 
@@ -71,7 +71,7 @@ public class Clue {
         return wordsOfGreen;
     }
 
-    private ArrayList<String> choiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
+    public ArrayList<String> choiceByYellow(char[] wordSpelled, char[] serviceSymbols, int numberOfYellow) {
 
         ArrayList<String> wordsOfYellow = new ArrayList<>();         //временный список проверенных по ^
         char[] ltersToCheck = new char[numberOfYellow];            //проверяемые символы на вхождение
@@ -103,7 +103,7 @@ public class Clue {
 
     }
 
-    private ArrayList<String> choiceByGrays(char[] wordSpelled, char[] serviceSymbols,
+    public ArrayList<String> choiceByGrays(char[] wordSpelled, char[] serviceSymbols,
                                             int numberOfGrays, int numbertOfGreen) {
 
         ArrayList<String> wordsOfGrays = new ArrayList<>();                 //временный список проверенных по -

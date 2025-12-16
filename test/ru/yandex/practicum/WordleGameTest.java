@@ -88,8 +88,6 @@ public class WordleGameTest {
         assertTrue(consoleOutput.contains("Длина слова не соответствует требованиям."));
         assertTrue(consoleOutput.contains("Поздравляем! Вы отгадали слово)"));
 
-        // Проверяем, что попытка с неверной длиной не уменьшила счетчик шагов
-        // Должно было быть 6 -> 5 (за СВЕТО) -> 5 (за ДЛИННОЕ, ошибка) -> игра закончена
         assertEquals(5, getPrivateField(game, "steps"));
     }
 
